@@ -283,7 +283,10 @@ MM MM::instance()
 bool MM::operator=(){
 };
 */
-    
+ 
+
+//needs to be moved from the MM into MMU
+//hardware
 int MM::readPageTable(int x, MemoryManagementUnit& u)
 {
 	if(pageTable.myPageTable[x].valid == true)
@@ -304,7 +307,15 @@ int MM::readPageTable(int x, MemoryManagementUnit& u)
 	/*else
 	cout << "error reading page table"<< endl;*/
 	return 0;
-}  
+} 
+
+
+int MemoryManagementUnit::readTLB(int x
+{
+	
+
+
+}
 
 void MM::pageIn(PTE pageT[], int page)
 {
